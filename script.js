@@ -41,13 +41,13 @@ btnScrollTo.addEventListener('click', () => {
 });
 
 //Nav bar links Smooth Scrolling
-document.querySelectorAll('.nav__link').forEach(element => {
-  element.addEventListener('click', function (e) {
-    e.preventDefault();
-    const id = this.getAttribute('href');
-    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-  });
-});
+// document.querySelectorAll('.nav__link').forEach(element => {
+//   element.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     const id = this.getAttribute('href');
+//     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+//   });
+// });
 
 //1. Add event listener to common parent element
 //2. Determine what element originated the event
