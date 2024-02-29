@@ -30,6 +30,7 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
+//==================================================================================
 //Smooth Scrolling to a section
 const btnScrollTo = document.querySelector('.btn--scroll-to');
 const section1 = document.querySelector('#section--1');
@@ -39,7 +40,7 @@ btnScrollTo.addEventListener('click', () => {
     behavior: 'smooth',
   });
 });
-
+//==================================================================================
 //Nav bar links Smooth Scrolling
 // document.querySelectorAll('.nav__link').forEach(element => {
 //   element.addEventListener('click', function (e) {
@@ -61,3 +62,21 @@ document.querySelector('.nav__links').addEventListener('click', function (e) {
     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
   }
 });
+//==================================================================================
+// Tabbed component
+const tabs = document.querySelectorAll('.operations__tab');
+const tabsContainer = document.querySelector('.operations__tab-container');
+const tabsContent = document.querySelectorAll('.operations__content');
+
+tabsContainer.addEventListener('click', function (e) {
+  const clicked = e.target.closest('.operations__tab');
+
+  //Guard clause
+  if (!clicked) return; //null - false
+
+  //Remove Non-Active tabs
+  tabs.forEach(t => t.classList.remove('operations__tab--active'));
+  //Active Tab
+  clicked.classList.add('operations__tab--active');
+});
+//==================================================================================
